@@ -40,8 +40,7 @@ class LogisticRegressionGD:
         self : object
         """
         rgen = np.random.RandomState(self.random_state)
-        self.w_ = rgen.normal(loc=0.0, scale=0.01,
-                              size=1 + X.shape[1])
+        self.w_ = rgen.normal(loc=0.0, scale=0.01, size=1 + X.shape[1])
         self.cost_ = []
 
         for i in range(self.n_iter):
@@ -53,8 +52,7 @@ class LogisticRegressionGD:
 
             # note that we compute the logistic `cost` now
             # instead of the sum of squared errors cost
-            cost = (-y.dot(np.log(output)) -
-                    ((1 - y).dot(np.log(1 - output))))
+            cost = (-y.dot(np.log(output)) - ((1 - y).dot(np.log(1 - output))))
             self.cost_.append(cost)
         return self
 
