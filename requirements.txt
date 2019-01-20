@@ -1,0 +1,7 @@
+pandas
+pyprind
+scipy
+sklearn
+nltk
+flask
+wtforms
