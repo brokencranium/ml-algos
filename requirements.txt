@@ -1,7 +1,12 @@
 pandas
 pyprind
 scipy
+numpy
 sklearn
 nltk
 flask
 wtforms
+matplotlib
+seaborn
+pydotplus
+tensorflow
