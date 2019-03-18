@@ -98,3 +98,9 @@ tmp/
 /test-output/
 jmeter.log
 .factorypath
+
+
+tf/checkpoint
+tf/*.index
+tf/*.meta
+tf/*.data*
