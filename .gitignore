@@ -27,7 +27,8 @@ webapp/movies/*.sqllite
 __py*/
 
 # Maven files #
-data/
+data/*.npz
+data/*ubyte*
 target/
 pom.xml.next
 

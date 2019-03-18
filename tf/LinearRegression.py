@@ -36,8 +36,7 @@ class LinearRegression(object):
         self.mean_cost = tf.reduce_mean(sqr_errors, name='mean_cost')
         print(self.mean_cost)
 
-        optimizer = tf.train.GradientDescentOptimizer(learning_rate=self.learning_rate,
-                                                      name='GradientDescent')
+        optimizer = tf.train.GradientDescentOptimizer(learning_rate=self.learning_rate, name='GradientDescent')
 
         self.optimizer = optimizer.minimize(self.mean_cost)
 
@@ -76,15 +75,12 @@ if __name__ == '__main__':
     plt.ylabel('Training Cost')
     plt.show()
 
-    plt.scatter(X_train, y_train,
-                marker='s', s=50,
-                label='Training Data')
+    plt.scatter(X_train, y_train, marker='s', s=50, label='Training Data')
 
-    plt.plot(range(X_train.shape[0]),
-             predict_linreg(sess, lr_model, X_train),
-             color='gray', marker='o',
-             markersize=6, linewidth=3,
-             label='LinReg Model')
+    plt.plot(
+        range(X_train.shape[0]), predict_linreg(sess, lr_model, X_train),
+        color='gray', marker='o', markersize=6, linewidth=3, label='LinReg Model'
+    )
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend()

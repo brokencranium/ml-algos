@@ -8,7 +8,7 @@ import numpy as np
 # Download data and save it in data directory
 # http://yann.lecun.com/exdb/mnist/
 
-def load_mnist(path, kind='train'):
+def load(path, kind='train'):
     """Load MNIST data from `path`"""
     labels_path = os.path.join(path,
                                '%s-labels-idx1-ubyte' % kind)
@@ -33,10 +33,11 @@ def load_mnist(path, kind='train'):
 
 
 if __name__ == '__main__':
-    X_train, y_train = load_mnist('../../data', kind='train')
+    # X_train, y_train = load_mnist('../../data', kind='train')
+    X_train, y_train = load('./', kind='train')
     print('Rows: %d, columns: %d' % (X_train.shape[0], X_train.shape[1]))
 
-    X_test, y_test = load_mnist('../../data', kind='t10k')
+    X_test, y_test = load('../../data', kind='t10k')
     print('Rows: %d, columns: %d' % (X_test.shape[0], X_test.shape[1]))
 
     fig, ax = plt.subplots(nrows=2, ncols=5, sharex=True, sharey=True)
